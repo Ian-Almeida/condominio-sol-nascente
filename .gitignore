@@ -1,0 +1,29 @@
+# dependencies
+client/node_modules
+# client/pnp
+# client/pnp.js
+
+server/node_modules
+# server/pnp
+# server/pnp.js
+
+.idea
+
+# # testing
+# client/coverage
+# server/coverage
+
+# # production
+# client/build
+# server/build
+
+# # misc
+# clinet/DS_Store
+# clinet/env.local
+# clinet/env.development.local
+# clinet/env.test.local
+# clinet/env.production.local
+
+# clinet/npm-debug.log*
+# clinet/yarn-debug.log*
+# clinet/yarn-error.log*

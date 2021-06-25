@@ -1,0 +1,12 @@
+.login-button {
+    @apply w-full rounded-lg
+}
+
+.input-item {
+    @apply w-80
+}
+
+.Logo {
+    background-image: url(../../assets/condominio.png);
+    @apply w-60
+}
