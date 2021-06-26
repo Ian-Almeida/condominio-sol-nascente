@@ -71,6 +71,7 @@ const Signup = () => {
       if(err && err.response){ 
 				const message = err.response.data;
 				openNotificationWithIcon('error', 'bottomLeft', 'Ocorreu um problema!', message);
+        return
       }
       openNotificationWithIcon('error', 'bottomLeft', 'Ocorreu um problema!', 'Erro inesperado!');
     }
@@ -337,15 +338,15 @@ const Signup = () => {
 
           <Form.Item
             name="condominio"
-            label="Condôminios"
+            label="Condomínios"
             rules={[
               {
                 required: true,
-                message: "Por favor escolha um Condôminio!",
+                message: "Por favor escolha um Condomínio!",
               },
             ]}
           >
-            <Select placeholder="Condôminio">
+            <Select placeholder="Condomínio">
               {condominiosOptions.map((item) => {
                 return (
                   <Option 
