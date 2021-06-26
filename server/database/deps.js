@@ -31,7 +31,7 @@ const execute = (query, params=[]) => {
     })
   }).then(results => {
     if(!results || results.length === 0) {
-      return undefined;
+      return [];
     }
     return results;
   }).catch((err) => {

@@ -159,6 +159,7 @@ const createTables = async () => {
   CREATE TABLE condominiosolnascente.funcionarios (
     id INT NOT NULL AUTO_INCREMENT,
     codigo_condominio INT NOT NULL,
+    codigo_usuario INT NOT NULL,
     nome VARCHAR(45) ,
     cpf VARCHAR(45) ,
     turno VARCHAR(45) ,
@@ -166,6 +167,9 @@ const createTables = async () => {
     salario FLOAT ,
     endereco_completo VARCHAR(255) ,
   PRIMARY KEY (id),
+  CONSTRAINT codigo_usuario_funcionarios_fk
+    FOREIGN KEY (codigo_usuario)
+    REFERENCES condominiosolnascente.usuarios (id),
   CONSTRAINT codigo_condominio_funcionarios_fk
     FOREIGN KEY (codigo_condominio)
     REFERENCES condominiosolnascente.condominios (id)) AUTO_INCREMENT = 1;  
@@ -188,16 +192,16 @@ const createTables = async () => {
 
   query = `
   CREATE TABLE condominiosolnascente.achados_perdidos (
-    id INT NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT,
     codigo_condominio INT NOT NULL,
     codigo_funcionario INT NOT NULL,
     descricao_objeto TEXT NOT NULL,
   PRIMARY KEY (id),
   CONSTRAINT codigo_condominio_achados_perdidos_fk
-    FOREIGN KEY (id)
+    FOREIGN KEY (codigo_condominio)
     REFERENCES condominiosolnascente.condominios (id),
   CONSTRAINT codigo_funcionario_achados_perdidos_fk
-    FOREIGN KEY (id)
+    FOREIGN KEY (codigo_funcionario)
     REFERENCES condominiosolnascente.funcionarios (id)) AUTO_INCREMENT = 1;
   `;
 

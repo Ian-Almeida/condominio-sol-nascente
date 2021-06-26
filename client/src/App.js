@@ -11,6 +11,12 @@ import Home from './pages/home/Home';
 import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
 import NavTopBar from './components/NavTopBar';
+import AchadosPerdidos from './pages/achadosperdidos/AchadosPerdidos';
+import Ocorrencias from './pages/ocorrencias/Ocorrencias';
+import Funcionarios from './pages/funcionarios/Funcionarios';
+import Condominio from './pages/condominio/Condominio';
+import Myprofile from './pages/myprofile/Myprofile';
+
 
 const App = () => {
   const [authenticated, setAuthenticated] = useState(!!localStorage.getItem('email'));
@@ -24,16 +30,19 @@ const App = () => {
             renders the first one that matches the current URL. */}
           <Switch>
             <Route path="/myprofile">
-                
+              <Myprofile />
+            </Route>
+            <Route path="/condominio">
+              <Condominio />
             </Route>
             <Route path="/funcionarios">
-              
+              <Funcionarios />
             </Route>
             <Route path="/ocorrencias">
-              
+              <Ocorrencias />
             </Route>
             <Route path="/achadosperdidos">
-              
+              <AchadosPerdidos />
             </Route>
             {!authenticated &&<Route path="/login">
               <Login onAttAuth={setAuthenticated}/>

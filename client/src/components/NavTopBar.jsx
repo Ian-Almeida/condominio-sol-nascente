@@ -53,17 +53,20 @@ const NavTopBar = (props) => {
         className="flex justify-center w-full"
       >
         <Menu.Item key="condominio" icon={<HomeOutlined />}>
-          Condôminio
+          Condomínio
+          <Link to="/condominio"></Link>
         </Menu.Item>
         <Menu.Item key="achadosPerdidos" icon={<InboxOutlined />}>
           Achados e Perdidos
+          <Link to="/achadosperdidos"></Link>
         </Menu.Item>
         <Menu.Item key="funcionarios" icon={<IdcardOutlined />}>
           Funcionarios
-          <Link to="/about"></Link>
+          <Link to="/funcionarios"></Link>
         </Menu.Item>
         <Menu.Item key="ocorrencias" icon={<AlertOutlined />}>
           Ocorrências
+          <Link to="/ocorrencias"></Link>
         </Menu.Item>
       </Menu>
       <div className="absolute right-0 p-2">
