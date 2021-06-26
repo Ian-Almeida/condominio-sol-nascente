@@ -384,7 +384,7 @@ const Signup = () => {
             </Select>
           </Form.Item>
 
-          {selectedFuncao === 'Morador' ? moradorFields() : []}
+          {['Morador','Sindico', 'Subsindico'].includes(selectedFuncao) ? moradorFields() : []}
           {['Zelador', 'Porteiro'].includes(selectedFuncao) ? funcionarioFields() : []}
 
           <Form.Item>

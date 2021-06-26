@@ -41,7 +41,7 @@ router.post('/signup', async(req, res) => {
             return
         }
 
-        if(body.funcao_select === 'Morador') {
+        if(['Morador','Sindico', 'Subsindico'].includes(body.funcao_select)) {
             query = `INSERT INTO usuarios (nome, cpf, email, senha, telefone_celular, telefone_fixo, condominio_id, bloco, apartamento, funcao, salao_festas_id)
                 VALUES (?, ?, ?, ? , ?, ?, ?, ?, ?, ?, ?)
              `
@@ -112,6 +112,8 @@ router.post('/signup', async(req, res) => {
                 return
             }
             res.send(result)
+        }  else if(['Sindico', 'Subsindico'].includes(body.funcao_select)) {
+            
         }
 
     } catch (err) {
