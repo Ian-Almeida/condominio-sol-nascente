@@ -26,7 +26,7 @@ const AchadosPerdidos = () => {
   const [updatedObject, setUpdatedObject] = useState({});
 
   useEffect(() => {
-    async function getCondominios() {
+    async function getCondominioByUserId() {
       try {
         const response = await api.getCondominioByUserId(user.id);
         if(response) {
@@ -37,7 +37,7 @@ const AchadosPerdidos = () => {
       }
       
     }
-    getCondominios()
+    getCondominioByUserId()
   }, [user.id]);
 
   useEffect(() => {

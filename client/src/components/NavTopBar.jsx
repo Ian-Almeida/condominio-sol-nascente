@@ -90,11 +90,15 @@ const NavTopBar = (props) => {
           <div className="flex justify-center space-x-10">
             <Button onClick={() => {
               onChangeModalState(false);
-              history.push('/myprofile')
+              history.push('/myprofile');
             }}>Minha conta</Button>
             {user.funcao === 'Administrador' && <Button onClick={() => {
               onChangeModalState(false);
-              history.push('/signup')
+              history.push('/condominios');
+            }}>Condomínios</Button>}
+            {user.funcao === 'Administrador' && <Button onClick={() => {
+              onChangeModalState(false);
+              history.push('/signup');
             }}>Registrar</Button>}
             <Button onClick={onLogout}>Sair</Button>
           </div>
