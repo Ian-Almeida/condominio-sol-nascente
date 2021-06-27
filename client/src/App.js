@@ -15,6 +15,7 @@ import AchadosPerdidos from './pages/achadosperdidos/AchadosPerdidos';
 import Ocorrencias from './pages/ocorrencias/Ocorrencias';
 import Funcionarios from './pages/funcionarios/Funcionarios';
 import Condominio from './pages/condominio/Condominio';
+import Condominios from './pages/condominios/Condominios';
 import Myprofile from './pages/myprofile/Myprofile';
 
 
@@ -34,6 +35,9 @@ const App = () => {
             </Route>
             <Route path="/condominio">
               <Condominio />
+            </Route>
+            <Route path="/condominios">
+              <Condominios />
             </Route>
             <Route path="/funcionarios">
               <Funcionarios />

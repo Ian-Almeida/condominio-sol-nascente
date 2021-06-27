@@ -206,7 +206,7 @@ const Signup = () => {
 
   return (
     <div className="flex justify-center items-center w-full h-full">
-      <Card className="shadow-lg">
+      <Card title="Registrar Usuário" className="shadow-lg">
         <Form
           form={form}
           name="register"
