@@ -57,7 +57,9 @@ const Signup = () => {
     let salao_festas = 0;
 
     condominios.forEach(item => {
+      // eslint-disable-next-line
       if(item.id == values.condominio) salao_festas = item.id; return
+      // eslint-enable-next-line
     });
     createdUser.salao_festas_id = salao_festas;
 
