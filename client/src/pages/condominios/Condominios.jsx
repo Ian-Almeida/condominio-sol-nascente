@@ -1,13 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Card, Table, Tooltip, Button, Modal, Form, Select, Input, InputNumber, Popconfirm } from 'antd';
+import { Card, Table, Button, Modal, Form, Input, InputNumber, Popconfirm } from 'antd';
 import MaskedInput from "antd-mask-input";
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
 
 import api from '../../api';
 import { getLoggedUser, openNotificationWithIcon } from '../../utils/utils';
-
-const { Option } = Select;
-const { TextArea } = Input;
 
 const Condominios = () => {
   const [registerModal, setRegisterModal] = useState(false);

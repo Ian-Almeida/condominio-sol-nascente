@@ -42,6 +42,18 @@ const api = {
     deleteAchadosPerdidosObject: async (id) => {
         return axios.delete(`${apiUrl}achadosPerdidos/${id}`);
     },
+    getOcorrenciasByCondominioId: async (codigo_condominio) => {
+        return axios.get(`${apiUrl}ocorrencias/${codigo_condominio}`);
+    },
+    registerOcorrencia: async (payload) => {
+        return axios.post(`${apiUrl}ocorrencias/`, payload);
+    },
+    updateOcorrencia: async (payload) => {
+        return axios.put(`${apiUrl}ocorrencias/`, payload);
+    },
+    deleteOcorrencia: async (id) => {
+        return axios.delete(`${apiUrl}ocorrencias/${id}`);
+    },
     
 }
 
