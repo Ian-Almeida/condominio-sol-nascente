@@ -170,7 +170,6 @@ const Ocorrencias = () => {
     obj.codigo_condominio = values.codigo_condominio;
     obj.categoria = values.categoria;
     obj.descricao_completa = values.descricao_completa;
-    console.log(obj)
 
     try {
       const response = await api.updateOcorrencia(obj);
@@ -309,7 +308,7 @@ const Ocorrencias = () => {
         centered
         visible={updateModal}
         footer={null}
-        onCancel={() => setRegisterModalVisible(false)}
+        onCancel={() => setUpdateModalVisible(false)}
        >
          <Form
           form={updateForm}

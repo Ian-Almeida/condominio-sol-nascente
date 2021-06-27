@@ -27,6 +27,12 @@ const api = {
     getFuncionariosByCondominioId: async (condominioId) => {
         return axios.get(`${apiUrl}funcionarios/${condominioId}/`);
     },
+    deleteFuncionario: async (id) => {
+        return axios.delete(`${apiUrl}funcionarios/${id}`);
+    },
+    updateFuncionario: async (payload) => {
+        return axios.put(`${apiUrl}funcionarios/`, payload);
+    },
     registerAchadosPerdidos: async (payload) => {
         return axios.post(`${apiUrl}achadosPerdidos/`, payload); 
     },
