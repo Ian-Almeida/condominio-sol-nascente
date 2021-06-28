@@ -93,17 +93,13 @@ const createTables = async () => {
   CREATE TABLE condominiosolnascente.reservas ( 
     id INT NOT NULL AUTO_INCREMENT,
     codigo_condominio INT NOT NULL,
-    codigo_usuario INT NOT NULL,
     codigo_salao_festa INT NOT NULL,
     data_inicio DATETIME NOT NULL,
     data_fim DATETIME NOT NULL,
   PRIMARY KEY (id),
   CONSTRAINT codigo_condominio_reservas_fk
     FOREIGN KEY (codigo_condominio)
-    REFERENCES condominiosolnascente.condominios (id),
-  CONSTRAINT codigo_condomino_reservas_fk
-    FOREIGN KEY (codigo_usuario)
-    REFERENCES condominiosolnascente.usuarios (id)) AUTO_INCREMENT = 1;
+    REFERENCES condominiosolnascente.condominios (id)) AUTO_INCREMENT = 1;
   `;
 
   connection.query(query, async function(err, rows, fields) {

@@ -4,7 +4,7 @@ import {
   IdcardOutlined,
   InboxOutlined,
   AlertOutlined,
-  HomeOutlined,
+  CalendarOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 import { Button, Tooltip, Modal } from "antd";
@@ -52,9 +52,9 @@ const NavTopBar = (props) => {
         mode="horizontal"
         className="flex justify-center w-full"
       >
-        <Menu.Item key="condominio" icon={<HomeOutlined />}>
-          Condomínio
-          <Link to="/condominio"></Link>
+        <Menu.Item key="reservas" icon={<CalendarOutlined />}>
+          Reservas
+          <Link to="/reservas"></Link>
         </Menu.Item>
         <Menu.Item key="achadosPerdidos" icon={<InboxOutlined />}>
           Achados e Perdidos

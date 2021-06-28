@@ -170,10 +170,6 @@ const Funcionarios = () => {
     }
   }
 
-  const teste = () => {
-    console.log(tableItems)
-  }
-
   return (
     <Card 
     title={
@@ -198,7 +194,6 @@ const Funcionarios = () => {
             )
           })}
         </Select>
-        <Button onClick={teste}>teste</Button>
       </div>
       <Table 
         rowKey="id" 

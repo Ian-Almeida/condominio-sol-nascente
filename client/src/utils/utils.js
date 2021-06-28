@@ -26,3 +26,16 @@ export const openNotificationWithIcon = (type, placement, title, text) => {
           placement,
     });
   };
+
+export const formatDate = (data) => {
+
+    let date = data.split('T')[0];
+    let time = data.split('T')[1];
+
+    date = date.split('-');
+    time = time.split(':');
+
+    date = date[2] + '/' + date[1] + '/' + date[0] + ' ' + time[0] + ':' + time[1];
+    
+    return date;
+}

@@ -14,7 +14,7 @@ import NavTopBar from './components/NavTopBar';
 import AchadosPerdidos from './pages/achadosperdidos/AchadosPerdidos';
 import Ocorrencias from './pages/ocorrencias/Ocorrencias';
 import Funcionarios from './pages/funcionarios/Funcionarios';
-import Condominio from './pages/condominio/Condominio';
+import Reservas from './pages/reservas/Reservas';
 import Condominios from './pages/condominios/Condominios';
 import Myprofile from './pages/myprofile/Myprofile';
 
@@ -33,8 +33,8 @@ const App = () => {
             <Route path="/myprofile">
               <Myprofile />
             </Route>
-            <Route path="/condominio">
-              <Condominio />
+            <Route path="/reservas">
+              <Reservas />
             </Route>
             <Route path="/condominios">
               <Condominios />

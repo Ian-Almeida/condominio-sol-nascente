@@ -19,6 +19,7 @@ const Ocorrencias = () => {
   const [updatedOcorrencia, setUpdatedOcorrencia] = useState({});
 
   const [userCondominio, setUserCondominio] = useState({});
+
   const user = getLoggedUser();
 
   const categoriasOptions = [
@@ -108,7 +109,7 @@ const Ocorrencias = () => {
       dataIndex: 'descricao_completa',
       key: 'descricao_completa',
       render: (text, record) => (
-        <span>{text}</span>
+        <TextArea readOnly autoSize={{ minRows: 2, maxRows: 4 }} defaultValue={text} />
       )
     },
     {

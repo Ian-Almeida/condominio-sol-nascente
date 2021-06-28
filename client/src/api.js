@@ -60,6 +60,18 @@ const api = {
     deleteOcorrencia: async (id) => {
         return axios.delete(`${apiUrl}ocorrencias/${id}`);
     },
+    getReservasByCondominioId: async (codigo_condominio) => {
+        return axios.get(`${apiUrl}reservas/${codigo_condominio}`);
+    },
+    registerReserva: async (payload) => {
+        return axios.post(`${apiUrl}reservas/`, payload);
+    },
+    updateReserva: async (payload) => {
+        return axios.put(`${apiUrl}reservas/`, payload);
+    },
+    deleteReserva: async (id) => {
+        return axios.delete(`${apiUrl}reservas/${id}`);
+    },
     
 }
 
