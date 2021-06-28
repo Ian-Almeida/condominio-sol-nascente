@@ -277,4 +277,19 @@ const init = async () => {
   return passed;
 }
 
+if(module.parent) {
+  console.log('required module')
+} else {
+  try {
+    init()
+      .then((resp)=> {
+        if(resp) {
+          console.log('DATABASE INITIALIZED WITH SUCCESS');
+        }
+    });
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 module.exports = { init };
