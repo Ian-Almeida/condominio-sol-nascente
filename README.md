@@ -2,7 +2,7 @@
 
 This project was designed as an exam, does not feature any kind of security for data!!!
 <br>
-Most of sensitive data from registrations are saved in database without encrypting and inside Web's Local Storage for session maintenance.
+Most of the sensitive receive data from registrations are saved in database without encrypting and inside Web's Local Storage for session maintenance.
 
 ## Project backend setup
   ```
