@@ -23,7 +23,7 @@ Most of the sensitive receive data from registrations are saved in database with
 
   ## Initilialize MYSQL Database with script
   ```
-  ./server run
+  cd server
   npm run initdb
   ```
 ## Project frontend setup
